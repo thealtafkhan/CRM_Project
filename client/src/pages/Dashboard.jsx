@@ -242,7 +242,7 @@ const Dashboard = () => {
                 <i className="bi bi-shield-lock me-1"></i> Root Administrator
               </span>
               <span className="badge bg-dark border border-secondary text-light px-2 py-1 small rounded-pill">
-                Tenant: Acxiom Enterprise
+                Status: Active
               </span>
             </div>
             <h2 className="fw-bold mb-1 text-white">System Command Center</h2>

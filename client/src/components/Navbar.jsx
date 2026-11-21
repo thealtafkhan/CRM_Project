@@ -28,7 +28,6 @@ const Navbar = () => {
           </div>
           <div className="d-flex align-items-center">
             <span className="crm-brand-title">CRM</span>
-            <span className="crm-brand-tag d-none d-sm-inline-block">Enterprise</span>
           </div>
         </Link>
 

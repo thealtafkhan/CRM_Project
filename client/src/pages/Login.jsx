@@ -65,7 +65,7 @@ const Login = () => {
           <h3 className="fw-bolder mb-1" style={{ color: '#0F172A', letterSpacing: '-0.02em' }}>
             CRM
           </h3>
-          <p className="text-muted small mb-0">Enterprise Sales & Relationship Platform</p>
+          <p className="text-muted small mb-0">Sales & Relationship Platform</p>
         </div>
 
         {error && (

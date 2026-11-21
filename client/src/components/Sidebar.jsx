@@ -57,15 +57,6 @@ const Sidebar = () => {
         </>
       )}
 
-      <div className="mt-auto pt-4 border-top">
-        <div className="p-3 rounded-3" style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)', border: '1px solid #C7D2FE' }}>
-          <div className="d-flex align-items-center gap-2 mb-1">
-            <span className="badge-pill badge-primary-soft" style={{ fontSize: '0.65rem' }}>v2.0 Pro</span>
-          </div>
-          <div className="small fw-bold text-dark mb-1">CRM Platform</div>
-          <div className="text-secondary" style={{ fontSize: '0.725rem' }}>Enterprise Sales & Pipeline Suite</div>
-        </div>
-      </div>
     </div>
   );
 };
