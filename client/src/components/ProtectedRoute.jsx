@@ -9,7 +9,7 @@ const ProtectedRoute = ({ allowedRoles }) => {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100">
         <div className="spinner-border text-primary" role="status">
-          <span className="visually-hidden">Loading AcxiomCRM...</span>
+          <span className="visually-hidden">Loading ZenithCRM...</span>
         </div>
       </div>
     );

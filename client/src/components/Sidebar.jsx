@@ -34,28 +34,38 @@ const Sidebar = () => {
           <span>Activity Log</span>
         </NavLink>
         <NavLink to="/reports" className={({ isActive }) => `crm-nav-link ${isActive ? 'active' : ''}`}>
-          <i className="bi bi-bar-chart-fill"></i>
+          <i className="bi bi-graph-up-arrow"></i>
           <span>Reports & Analytics</span>
         </NavLink>
       </nav>
 
       {(isAdmin || isManager) && (
         <>
-          <div className="crm-sidebar-header mt-3">Administration</div>
+          <div className="crm-sidebar-header mt-3">Governance & Control</div>
           <nav className="nav flex-column">
             {isAdmin && (
               <NavLink to="/users" className={({ isActive }) => `crm-nav-link ${isActive ? 'active' : ''}`}>
-                <i className="bi bi-shield-person"></i>
-                <span>User Governance</span>
+                <i className="bi bi-shield-lock-fill"></i>
+                <span>User Management</span>
               </NavLink>
             )}
             <NavLink to="/audit" className={({ isActive }) => `crm-nav-link ${isActive ? 'active' : ''}`}>
-              <i className="bi bi-journal-code"></i>
+              <i className="bi bi-journal-text"></i>
               <span>Audit Trail</span>
             </NavLink>
           </nav>
         </>
       )}
+
+      <div className="mt-auto pt-4 border-top">
+        <div className="p-3 rounded-3" style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)', border: '1px solid #C7D2FE' }}>
+          <div className="d-flex align-items-center gap-2 mb-1">
+            <span className="badge-pill badge-primary-soft" style={{ fontSize: '0.65rem' }}>v2.0 Pro</span>
+          </div>
+          <div className="small fw-bold text-dark mb-1">Zenith Intelligence</div>
+          <div className="text-secondary" style={{ fontSize: '0.725rem' }}>Enterprise Sales & Pipeline CRM Suite</div>
+        </div>
+      </div>
     </div>
   );
 };

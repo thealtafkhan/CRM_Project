@@ -8,11 +8,11 @@ const Navbar = () => {
   const getRoleBadge = (role) => {
     switch (role) {
       case 'Admin':
-        return <span className="badge-pill badge-danger-soft">Admin</span>;
+        return <span className="badge-pill badge-purple-soft"><i className="bi bi-shield-lock-fill"></i> Admin</span>;
       case 'Manager':
-        return <span className="badge-pill badge-primary-soft">Sales Manager</span>;
+        return <span className="badge-pill badge-primary-soft"><i className="bi bi-person-badge-fill"></i> Sales Manager</span>;
       case 'SalesExecutive':
-        return <span className="badge-pill badge-success-soft">Sales Exec</span>;
+        return <span className="badge-pill badge-success-soft"><i className="bi bi-lightning-charge-fill"></i> Sales Rep</span>;
       default:
         return <span className="badge-pill badge-secondary-soft">{role}</span>;
     }
@@ -22,12 +22,13 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg crm-navbar sticky-top">
       <div className="container-fluid px-3">
         {/* Brand */}
-        <Link className="navbar-brand d-flex align-items-center gap-2 text-white text-decoration-none" to="/dashboard">
+        <Link className="navbar-brand d-flex align-items-center gap-2 text-decoration-none" to="/dashboard">
           <div className="crm-brand-icon">
-            <i className="bi bi-intersect"></i>
+            <img src="/logo.svg" alt="ZenithCRM Logo" width="34" height="34" />
           </div>
-          <div>
-            <span className="fw-bold fs-5 tracking-tight">Acxiom<span style={{ color: '#60A5FA' }}>CRM</span></span>
+          <div className="d-flex align-items-center">
+            <span className="crm-brand-title">Zenith<span style={{ color: '#818CF8' }}>CRM</span></span>
+            <span className="crm-brand-tag d-none d-sm-inline-block">Enterprise</span>
           </div>
         </Link>
 
@@ -36,8 +37,8 @@ const Navbar = () => {
           {user && (
             <>
               <div className="user-profile-pill d-none d-sm-flex">
-                <div className="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style={{ width: '28px', height: '28px', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                  {user.name.charAt(0)}
+                <div className="avatar-circle">
+                  {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                 </div>
                 <div className="d-flex flex-column text-start">
                   <span className="text-white fw-semibold small lh-1">{user.name}</span>
@@ -48,8 +49,8 @@ const Navbar = () => {
 
               <button
                 onClick={logout}
-                className="btn btn-sm btn-outline-light d-flex align-items-center gap-1 py-1 px-3"
-                style={{ borderRadius: '8px', fontSize: '0.825rem', borderColor: 'rgba(255,255,255,0.2)' }}
+                className="btn btn-sm btn-outline-light d-flex align-items-center gap-2 py-1 px-3"
+                style={{ borderRadius: '10px', fontSize: '0.825rem', borderColor: 'rgba(255,255,255,0.2)' }}
                 title="Sign Out"
               >
                 <i className="bi bi-box-arrow-right"></i>

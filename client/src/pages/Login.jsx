@@ -41,32 +41,52 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center min-vh-100" style={{ backgroundColor: '#F8FAFC' }}>
-      <div className="crm-card p-4 p-sm-5" style={{ maxWidth: '440px', width: '100%', boxShadow: '0 20px 25px -5px rgba(15, 23, 42, 0.08)' }}>
+    <div
+      className="d-flex align-items-center justify-content-center min-vh-100 position-relative px-3 py-5"
+      style={{
+        background: 'radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.15), transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(139, 92, 246, 0.12), transparent 50%), #0B0F19'
+      }}
+    >
+      <div
+        className="card border-0 p-4 p-sm-5 position-relative"
+        style={{
+          maxWidth: '460px',
+          width: '100%',
+          borderRadius: '24px',
+          background: 'rgba(255, 255, 255, 0.98)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(20px)'
+        }}
+      >
         <div className="text-center mb-4">
-          <div className="d-inline-flex align-items-center justify-content-center bg-primary text-white p-3 rounded-3 mb-3 shadow-sm" style={{ width: '52px', height: '52px' }}>
-            <i className="bi bi-intersect fs-3"></i>
+          <div className="d-inline-flex align-items-center justify-content-center p-2 mb-3">
+            <img src="/logo.svg" alt="ZenithCRM Logo" width="56" height="56" style={{ filter: 'drop-shadow(0 6px 12px rgba(99, 102, 241, 0.35))' }} />
           </div>
-          <h3 className="fw-bold text-dark mb-1">Acxiom<span style={{ color: '#2563EB' }}>CRM</span></h3>
-          <p className="text-muted small">Enterprise Customer Relationship & Sales Management</p>
+          <h3 className="fw-bolder mb-1" style={{ color: '#0F172A', letterSpacing: '-0.02em' }}>
+            Zenith<span style={{ color: '#6366F1' }}>CRM</span>
+          </h3>
+          <p className="text-muted small mb-0">Next-Gen Enterprise Sales & Growth Platform</p>
         </div>
 
         {error && (
-          <div className="alert alert-danger d-flex align-items-center p-2 mb-3 small border-0" style={{ backgroundColor: '#FEF2F2', color: '#991B1B' }}>
-            <i className="bi bi-exclamation-triangle-fill flex-shrink-0 me-2 fs-5"></i>
+          <div className="alert alert-danger d-flex align-items-center p-3 mb-4 small rounded-3 border-0" style={{ backgroundColor: '#FFF1F2', color: '#9F1239' }}>
+            <i className="bi bi-exclamation-octagon-fill flex-shrink-0 me-2 fs-5"></i>
             <div>{error}</div>
           </div>
         )}
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Email or Username</label>
+            <label className="form-label text-dark fw-semibold">Email or Username</label>
             <div className="input-group">
-              <span className="input-group-text bg-light border-end-0"><i className="bi bi-envelope text-muted"></i></span>
+              <span className="input-group-text bg-light border-end-0 text-muted" style={{ borderRadius: '10px 0 0 10px' }}>
+                <i className="bi bi-envelope"></i>
+              </span>
               <input
                 type="text"
                 className="form-control border-start-0"
-                placeholder="name@acxiomcrm.com"
+                style={{ borderRadius: '0 10px 10px 0' }}
+                placeholder="name@zenithcrm.com"
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
                 required
@@ -75,12 +95,17 @@ const Login = () => {
           </div>
 
           <div className="mb-4">
-            <label className="form-label">Password</label>
+            <div className="d-flex justify-content-between align-items-center mb-1">
+              <label className="form-label text-dark fw-semibold mb-0">Password</label>
+            </div>
             <div className="input-group">
-              <span className="input-group-text bg-light border-end-0"><i className="bi bi-key text-muted"></i></span>
+              <span className="input-group-text bg-light border-end-0 text-muted" style={{ borderRadius: '10px 0 0 10px' }}>
+                <i className="bi bi-key"></i>
+              </span>
               <input
                 type="password"
                 className="form-control border-start-0"
+                style={{ borderRadius: '0 10px 10px 0' }}
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -91,17 +116,18 @@ const Login = () => {
 
           <button
             type="submit"
-            className="btn btn-primary w-100 py-2 fw-semibold d-flex align-items-center justify-content-center"
+            className="btn btn-primary w-100 py-2 fw-semibold d-flex align-items-center justify-content-center shadow-sm"
+            style={{ borderRadius: '12px' }}
             disabled={submitting}
           >
             {submitting ? (
               <>
                 <span className="spinner-border spinner-border-sm me-2" role="status"></span>
-                Signing In...
+                Authenticating...
               </>
             ) : (
               <>
-                Sign In to CRM Portal
+                Sign In to Workspace
                 <i className="bi bi-arrow-right ms-2"></i>
               </>
             )}
@@ -109,27 +135,35 @@ const Login = () => {
         </form>
 
         <div className="border-top mt-4 pt-3">
-          <small className="text-muted d-block text-center mb-2 fw-semibold">Quick Role Switcher:</small>
+          <div className="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <span className="badge-pill badge-primary-soft" style={{ fontSize: '0.68rem' }}>1-Click Demo Login</span>
+          </div>
           <div className="d-flex justify-content-between gap-2">
             <button
               type="button"
-              className="btn btn-sm btn-outline-secondary flex-fill fw-semibold"
+              className="btn btn-sm btn-outline-secondary flex-fill fw-semibold py-2 d-flex flex-column align-items-center"
+              style={{ borderRadius: '10px', fontSize: '0.78rem' }}
               onClick={() => fillCredentials('admin@acxiomcrm.com', 'Admin@12345')}
             >
+              <i className="bi bi-shield-lock-fill text-purple mb-1" style={{ color: '#8B5CF6' }}></i>
               Admin
             </button>
             <button
               type="button"
-              className="btn btn-sm btn-outline-secondary flex-fill fw-semibold"
+              className="btn btn-sm btn-outline-secondary flex-fill fw-semibold py-2 d-flex flex-column align-items-center"
+              style={{ borderRadius: '10px', fontSize: '0.78rem' }}
               onClick={() => fillCredentials('manager@acxiomcrm.com', 'Manager@12345')}
             >
+              <i className="bi bi-person-badge-fill text-primary mb-1" style={{ color: '#6366F1' }}></i>
               Manager
             </button>
             <button
               type="button"
-              className="btn btn-sm btn-outline-secondary flex-fill fw-semibold"
+              className="btn btn-sm btn-outline-secondary flex-fill fw-semibold py-2 d-flex flex-column align-items-center"
+              style={{ borderRadius: '10px', fontSize: '0.78rem' }}
               onClick={() => fillCredentials('sales@acxiomcrm.com', 'Sales@12345')}
             >
+              <i className="bi bi-lightning-charge-fill text-success mb-1" style={{ color: '#10B981' }}></i>
               Sales Rep
             </button>
           </div>
