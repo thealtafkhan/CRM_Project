@@ -64,4 +64,31 @@ Comprehensive project documentation is maintained under the [`docs/`](./docs) di
 ---
 
 ## Quick Start
-Refer to [`docs/INSTALLATION_GUIDE.md`](./docs/INSTALLATION_GUIDE.md) for complete instructions on prerequisites, database initialization, seeding initial users, and starting the development server.
+
+### 1. Prerequisites
+- **Node.js**: v18+ or v20+
+- **MongoDB**: Running locally on port `27017`
+
+### 2. Seed Database
+Populate initial roles, users, and CRM sample data:
+```bash
+npm run seed
+```
+
+### 3. Start Both Backend & Frontend
+Run both server (Express) and client (Vite React) concurrently with a single command:
+```bash
+npm run dev
+```
+
+- **Client Application**: [http://localhost:5173](http://localhost:5173)
+- **Backend API Server**: [http://localhost:5000](http://localhost:5000)
+
+### 4. Default Seed Credentials
+| Role | Email | Password |
+|---|---|---|
+| **System Admin** | `admin@acxiomcrm.com` | `Admin@12345` |
+| **Sales Manager** | `manager@acxiomcrm.com` | `Manager@12345` |
+| **Sales Executive** | `sales@acxiomcrm.com` | `Sales@12345` |
+
+Refer to [`docs/INSTALLATION_GUIDE.md`](./docs/INSTALLATION_GUIDE.md) for full architecture and configuration documentation.
