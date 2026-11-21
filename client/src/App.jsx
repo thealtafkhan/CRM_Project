@@ -26,7 +26,7 @@ const AppLayout = ({ children }) => {
       <Navbar />
       <div className="d-flex flex-grow-1">
         <Sidebar />
-        <main className="flex-grow-1 bg-light overflow-auto" style={{ maxHeight: 'calc(100vh - 56px)' }}>
+        <main className="flex-grow-1 overflow-auto" style={{ maxHeight: 'calc(100vh - 56px)', backgroundColor: 'var(--crm-bg)', color: 'var(--crm-text-primary)' }}>
           {children}
         </main>
       </div>
