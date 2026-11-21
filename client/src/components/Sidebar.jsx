@@ -62,8 +62,8 @@ const Sidebar = () => {
           <div className="d-flex align-items-center gap-2 mb-1">
             <span className="badge-pill badge-primary-soft" style={{ fontSize: '0.65rem' }}>v2.0 Pro</span>
           </div>
-          <div className="small fw-bold text-dark mb-1">Zenith Intelligence</div>
-          <div className="text-secondary" style={{ fontSize: '0.725rem' }}>Enterprise Sales & Pipeline CRM Suite</div>
+          <div className="small fw-bold text-dark mb-1">CRM Platform</div>
+          <div className="text-secondary" style={{ fontSize: '0.725rem' }}>Enterprise Sales & Pipeline Suite</div>
         </div>
       </div>
     </div>

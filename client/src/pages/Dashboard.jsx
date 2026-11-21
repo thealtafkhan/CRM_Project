@@ -114,7 +114,7 @@ const Dashboard = () => {
       <div className="d-flex justify-content-center align-items-center py-5" style={{ minHeight: '60vh' }}>
         <div className="text-center">
           <div className="spinner-border text-primary mb-3" style={{ width: '3rem', height: '3rem' }} role="status"></div>
-          <div className="text-secondary fw-semibold">Loading Zenith Intelligence...</div>
+          <div className="text-secondary fw-semibold">Loading CRM Intelligence...</div>
         </div>
       </div>
     );

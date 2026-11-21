@@ -60,12 +60,12 @@ const Login = () => {
       >
         <div className="text-center mb-4">
           <div className="d-inline-flex align-items-center justify-content-center p-2 mb-3">
-            <img src="/logo.svg" alt="ZenithCRM Logo" width="56" height="56" style={{ filter: 'drop-shadow(0 6px 12px rgba(99, 102, 241, 0.35))' }} />
+            <img src="/logo.svg" alt="CRM Logo" width="56" height="56" style={{ filter: 'drop-shadow(0 6px 12px rgba(99, 102, 241, 0.35))' }} />
           </div>
           <h3 className="fw-bolder mb-1" style={{ color: '#0F172A', letterSpacing: '-0.02em' }}>
-            Zenith<span style={{ color: '#6366F1' }}>CRM</span>
+            CRM
           </h3>
-          <p className="text-muted small mb-0">Next-Gen Enterprise Sales & Growth Platform</p>
+          <p className="text-muted small mb-0">Enterprise Sales & Relationship Platform</p>
         </div>
 
         {error && (
@@ -86,7 +86,7 @@ const Login = () => {
                 type="text"
                 className="form-control border-start-0"
                 style={{ borderRadius: '0 10px 10px 0' }}
-                placeholder="name@zenithcrm.com"
+                placeholder="name@crm.com"
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
                 required

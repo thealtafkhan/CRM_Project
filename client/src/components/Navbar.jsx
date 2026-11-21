@@ -24,10 +24,10 @@ const Navbar = () => {
         {/* Brand */}
         <Link className="navbar-brand d-flex align-items-center gap-2 text-decoration-none" to="/dashboard">
           <div className="crm-brand-icon">
-            <img src="/logo.svg" alt="ZenithCRM Logo" width="34" height="34" />
+            <img src="/logo.svg" alt="CRM Logo" width="34" height="34" />
           </div>
           <div className="d-flex align-items-center">
-            <span className="crm-brand-title">Zenith<span style={{ color: '#818CF8' }}>CRM</span></span>
+            <span className="crm-brand-title">CRM</span>
             <span className="crm-brand-tag d-none d-sm-inline-block">Enterprise</span>
           </div>
         </Link>
